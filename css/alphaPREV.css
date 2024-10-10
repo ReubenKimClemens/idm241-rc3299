@@ -38,6 +38,8 @@ body {
 }
 
 .media video {
+    width: 50%;
+    height: auto;
     box-shadow: 0px 10px 50px rgba(255, 255, 255, 0.25);
     display: block;
     margin: auto;
@@ -47,17 +49,31 @@ a:link, a:visited {
     color: white;
 }
 
+.interactions {
+    padding-top: calc(var(--rhythm)*1.5);
+    display: grid;
+    width: 85%;
+    grid-template-areas:
+    "rule feedback trigger"
+    "rule feedback loopmode"
+    "rule feedback loopmode";
+    grid-template-columns: 33% 33% 33%;
+    margin: auto;
+    font-size: calc(var(--rhythm)*.9);
+}
+
+.interactions li {
+    margin-left: calc(var(--rhythm)*-1.5);
+}
+
 .interactions div {
     box-shadow: 1px 1px 7px 1px black;
     margin-bottom: 1rem;
     padding: calc(var(--rhythm)*.5);
-    width: 90%;
-    /* background-color: var(--deal-tab-background); */
-    background: linear-gradient(180deg, rgba(13,46,64,1) 0%, rgba(26,98,136,1) 60%);
 }
 
 .interactions h2 {
-    background: linear-gradient(180deg, rgba(76,107,34,1) 0%, rgba(94,133,41,1) 50%);
+    background-color: var(--deal-background);
     color: var(--deal-text-color);
     text-align: center;
     width: 50%;
@@ -67,56 +83,25 @@ a:link, a:visited {
 
 .interactions .triggers {
     grid-area: trigger;
-    /* background-color: var(--deal-tab-background); */
+    width: 100%;
+    background-color: var(--deal-tab-background);
 }
 
 .interactions .rules {
     grid-area: rule;
-    /* background-color: var(--deal-tab-background); */
+    margin-right: var(--rhythm);
+    background-color: var(--deal-tab-background);
 }
 
 .interactions .feedback {
     grid-area: feedback;
-    /* background-color: var(--deal-tab-background); */
+    margin-right: 1rem;
+    background-color: var(--deal-tab-background);
 }
 
 .interactions .loopsmode {
     grid-area: loopmode;
-    /* background-color: var(--deal-tab-background); */
+    background-color: var(--deal-tab-background);
 }
 
-@media (width >= 300px) {
-    .interactions {
-        grid-template-areas: 
-            "trigger"
-            "rule"
-            "feedback"
-            "loopmode";
-        grid-template-columns: 100%;
-    }
-    .media video {
-        width: 90%;
-    }
-    .media {
-        padding: 7vw 0 70vw 0;
-    }
-}
 
-@media (width >= 900px) {
-    .interactions {
-        padding-top: calc(var(--rhythm)*1.5);
-        display: grid;
-        width: 85%;
-        grid-template-areas:
-        "trigger rule"
-        "feedback loopmode";
-        grid-template-columns: 50% 50%;
-        margin: auto;
-    }
-    .media {
-        padding: 7vw 0 42vw 0;
-    }
-    .media video {
-        width: 60%;
-    }
-}

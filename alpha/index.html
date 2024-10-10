@@ -5,25 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpha</title>
 
-    <link rel="stylesheet" href="../css/alpha.css">
+    <link rel="stylesheet" href="../css/alphaEDIT.css">
 </head>
 <body>
     <header>
         <h1>Microinteraction</h1>
-        <a href="https://store.steampowered.com/">https://store.steampowered.com/</a>
+        <a href="https://store.steampowered.com/" target="_blank">https://store.steampowered.com/</a>
     </header>
-    
-    <section class="media">
-        <div>
-            <video controls>
-                <source src="media/steam-panel-interaction.mp4" type="video/mp4">
-                <source src="media/steam-panel-interaction.ogv" type="video/ogg">
-            </video>
-        </div>
-    </section>
     <section class="interactions">
         <div class="triggers">
             <h2>Triggers</h2>
+            <h3>For game panel</h3>
             <ul>
                 <li>hover ON</li>
                     <ul>
@@ -35,34 +27,21 @@
         </div>
         <div class="rules">
             <h2>Rules</h2>
+            <h3>For game panel</h3>
             <ul>
                 <li>hover ON</li>
-                    <ul>
-                        <li>Preview location of the games address link</li>
-                        <li>Cursor switches from arrow to finger icon</li>
-                        <li>IF panel has livestream symbol:</li>
+                <ul>
+                    <li>Cursor switches from arrow to finger icon</li>
+                    <li>After 400ms Delay
                         <ul>
-                            <li>Text 'Live' turns blue</li>
+                            <li>Pop-up appears with game description</li>
                         </ul>
-                        <li>After 400ms delay</li>
-                        <ul>
-                            <li>IF panel is a game:</li>
-                            <ul>
-                                <li>Window appears with game description</li>
-                            </ul>
-                        </ul>
-                    </ul>
+                    </li>
+                </ul>
                 <li>Hover OFF</li>
                 <ul>
                     <li>Cursor reverts back to arrow icon</li>
-                    <li>IF panel is a game:</li>
-                    <ul>
-                        <li>Window closes</li>
-                    </ul>
-                    <li>IF panel has livestream symbol</li>
-                    <ul>
-                        <li>Text 'LIVE' turns white</li>
-                    </ul>
+                    <li>Pop-up closes</li>
                 </ul>
                 <li>Onclick</li>
                 <ul>
@@ -72,34 +51,21 @@
         </div>
         <div class="feedback">
             <h2>Feedback</h2>
+            <h3>For game panel</h3>
             <ul>
                 <li>hover ON</li>
-                    <ul>
-                        <li>Preview location of the games address link</li>
-                        <li>Cursor switches from arrow to finger icon</li>
-                        <li>IF panel has livestream symbol:</li>
+                <ul>
+                    <li>Cursor switches from arrow to finger icon</li>
+                    <li>After 400ms Delay
                         <ul>
-                            <li>Text 'Live' turns blue</li>
+                            <li>Pop-up appears with game description</li>
                         </ul>
-                        <li>After 400ms delay</li>
-                        <ul>
-                            <li>IF panel is a game:</li>
-                            <ul>
-                                <li>Window appears with game description</li>
-                            </ul>
-                        </ul>
-                    </ul>
+                    </li>
+                </ul>
                 <li>Hover OFF</li>
                 <ul>
                     <li>Cursor reverts back to arrow icon</li>
-                    <li>IF panel is a game:</li>
-                    <ul>
-                        <li>Window closes</li>
-                    </ul>
-                    <li>IF panel has livestream symbol</li>
-                    <ul>
-                        <li>Text 'LIVE' turns white</li>
-                    </ul>
+                    <li>Pop-up closes</li>
                 </ul>
                 <li>Onclick</li>
                 <ul>
@@ -110,24 +76,26 @@
         <div class="loopsmode">
             <h2>Loops</h2>
             <ul>
-                <li>IF panel is a game:</li>
+                <li>Pop-up:</li>
                 <ul>
-                    <li>Loops through images from the game(The ones provided for preview) in the window</li>
+                    <li>Loops through images from the game(The ones provided for preview) in the pop-up</li>
                 </ul>
             </ul>
             <h2>Modes</h2>
             <ul>
-                <li>Is a game:</li>
+                <li>Pop-up window when hovering:</li>
                 <ul>
-                    <li>When hover ON, opens window of game information</li>
-                    <li>When hover OFF, closes window of game information</li>
-                </ul>
-                <li>Has livestream symbol:</li>
-                <ul>
-                    <li>When hover ON, Text ‘LIVE’ turns blue</li>
-                    <li>When hover OFF, Text ‘LIVE’ turns white</li>
+                    <li>Opens a description of the game and loops through images</li>
                 </ul>
             </ul>
+        </div>
+    </section>
+    <section class="media">
+        <div>
+            <video controls>
+                <source src="media/steam-panel-interaction.mp4" type="video/mp4">
+                <source src="media/steam-panel-interaction.ogv" type="video/ogg">
+            </video>
         </div>
     </section>
 </body>
