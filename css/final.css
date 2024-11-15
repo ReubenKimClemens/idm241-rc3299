@@ -31,6 +31,10 @@ body {
     color: var(--text-color);
 }
 
+.interactions h3 {
+    margin-top: 10px;
+}
+
 .media {
     background-color: var(--video-background);
     height: 33vw;
