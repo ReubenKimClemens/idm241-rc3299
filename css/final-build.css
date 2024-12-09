@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+html {
+    --main-background: #202837;
+    --video-background: #232f45;
+    --header-background:#171d25;
+    --text-color: #FFFFFF;
+    --deal-tab-background: #1a6288;
+    --deal-background: #4C6B22;
+    --deal-text-color: #BEEE11;
+    --rhythm: 1.3vw;
+    font-family: Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--header-background);
+    padding: 0 calc(var(--rhythm)*2) calc(var(--rhythm)*2) calc(var(--rhythm)*2);
+    text-align: center;
+}
+header h1 {
+    padding-top: calc(var(--rhythm)*1.5);
+    text-transform: uppercase;
+    
+}
+
+body {
+    background-color: var(--main-background);
+    color: var(--text-color);
+}
+
+a:link, a:visited {
+    color: white;
+}
+
+.details div {
+    box-shadow: 1px 1px 7px 1px black;
+    margin-bottom: 1rem;
+    padding: calc(var(--rhythm)*.5);
+    width: 90%;
+    /* background-color: var(--deal-tab-background); */
+    background: linear-gradient(180deg, rgba(13,46,64,1) 0%, rgba(26,98,136,1) 60%);
+}
+
+.details h2 {
+    background: linear-gradient(180deg, rgba(76,107,34,1) 0%, rgba(94,133,41,1) 50%);
+    color: var(--deal-text-color);
+    text-align: center;
+    width: 50%;
+    padding: calc(var(--rhythm)*.3) 0 calc(var(--rhythm)*.3) 0;
+    margin-bottom: calc(var(--rhythm)*.2);
+}
+
+.details h3 {
+    margin-top: 10px;
+}
+
+
+.details .triggers {
+    grid-area: trigger;
+    /* background-color: var(--deal-tab-background); */
+}
+
+.details .rules {
+    grid-area: rule;
+    /* background-color: var(--deal-tab-background); */
+}
+
+.details .feedback {
+    grid-area: feedback;
+    /* background-color: var(--deal-tab-background); */
+}
+
+.details .loopsmode {
+    grid-area: loopmode;
+    /* background-color: var(--deal-tab-background); */
+}
+
+@media (width >= 300px) {
+    .details {
+        grid-template-areas: 
+            "trigger"
+            "rule"
+            "feedback"
+            "loopmode";
+        grid-template-columns: 100%;
+    }
+
+    .microinteraction {
+        padding: 7vw 0 70vw 0;
+    }
+}
+
+@media (width >= 900px) {
+    .details {
+        padding-top: calc(var(--rhythm)*1.5);
+        display: grid;
+        width: 85%;
+        grid-template-areas:
+        "trigger rule"
+        "feedback loopmode";
+        grid-template-columns: 50% 50%;
+        margin: auto;
+    }
+    .microinteraction {
+        padding: 7vw 0 42vw 0;
+    }
+}

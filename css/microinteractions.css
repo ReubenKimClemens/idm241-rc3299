@@ -1,0 +1,17 @@
+.microinteraction {
+    background-color: var(--video-background);
+    height: 33vw;
+    padding-top: calc(var(--rhythm)*1.5);
+}
+
+@media (width >= 300px) {
+    .microinteraction {
+        padding: 7vw 0 70vw 0;
+    }
+}
+
+@media (width >= 900px) {
+    .microinteraction {
+        padding: 7vw 0 42vw 0;
+    }
+}
