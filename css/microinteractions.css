@@ -4,6 +4,132 @@
     padding-top: calc(var(--rhythm)*1.5);
 }
 
+
+.browse-more {
+    width: 100px;
+    height: 25px;
+    background-color: white;
+}
+
+.store-items {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-container {
+    width: 306px;
+    height: 390px;
+    background-color: aqua;
+    position: relative;
+    
+}
+
+.item-container:hover .item-cover {
+    opacity: 0.3;
+}
+
+.item-container:hover .item-info {
+    opacity: 1;
+}
+
+.item-cover {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.item-cover img {
+    display: block;
+    margin: auto;
+    width: 306px;
+    height: 260px;
+    object-fit: fill;
+}
+
+.item-cover section img {
+    display: block;
+    margin: auto;
+    width: 306px;
+    height: 130px;
+    background-color: blue;
+}
+
+.item-info {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.carousel {
+    width: 200px;
+    height: 50px;
+    background-color: white;
+}
+
+.arrow-left {
+    width: 50px;
+    height: 75px;
+    background-color: white;
+}
+
+.arrow-left {
+    width: 50px;
+    height: 75px;
+    background-color: white;
+}
+
+.arrow-left:hover {
+    opacity: 50%;
+}
+
+.arrow-right {
+    width: 50px;
+    height: 75px;
+    background-color: white;
+}
+
+.arrow-right:hover {
+    opacity: 50%;
+}
+
+
+
+.store-bar .browse-more {
+    grid-area: browseMore;
+}
+
+.store-bar .store-items {
+    grid-area: storeItems;
+}
+
+.store-bar .carousel {
+    grid-area: itemCarousel;
+}
+
+.store-bar .arrow-left {
+    grid-area: leftArrow;
+}
+
+.store-bar .arrow-right {
+    grid-area: rightArrow;
+}
+
+.store-bar {
+    display: grid;
+    width: 80%;
+    grid-template-areas:
+    "leftArrow storeItems rightArrow"
+    ". itemCarousel .";
+    grid-template-columns: 5% 90% 5%;
+}
+
 @media (width >= 300px) {
     .microinteraction {
         padding: 7vw 0 70vw 0;
