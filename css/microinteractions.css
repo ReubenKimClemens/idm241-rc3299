@@ -19,9 +19,7 @@
 .item-container {
     width: 306px;
     height: 390px;
-    background-color: aqua;
     position: relative;
-    
 }
 
 .item-container:hover .item-cover {
@@ -53,7 +51,6 @@
     margin: auto;
     width: 306px;
     height: 130px;
-    background-color: blue;
 }
 
 .item-info {
@@ -125,6 +122,7 @@
     display: grid;
     width: 80%;
     grid-template-areas:
+    ". storeItems ."
     "leftArrow storeItems rightArrow"
     ". itemCarousel .";
     grid-template-columns: 5% 90% 5%;
