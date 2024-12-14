@@ -14,6 +14,7 @@
 .store-items {
     display: flex;
     flex-direction: row;
+    column-gap: 0.5rem;
 }
 
 .item-container {
@@ -64,42 +65,82 @@
     text-align: center;
 }
 
+.item-info p {
+    margin: 0.5rem auto 0 auto;
+    width: 300px;
+}
+
+.item-info a {
+    text-decoration: none;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3rem auto 0 auto;
+}
+
+.tags div {
+    background-color: white;
+    color: black;
+    font-size: .75rem;
+    width: fit-content;
+    padding: .5rem;
+    margin: 0 auto 1rem auto;
+}
+.tags a:first-child {
+    color: black;
+    text-decoration: none;
+    margin: 0;
+}
+
+.tags div:hover {
+    background-color: #4c92bb;
+    color: white;
+    font-size: .75rem;
+    width: fit-content;
+    padding: .5rem;
+}
+
+.item-info div a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    column-gap: .5rem;
+    margin: .5rem auto 0 auto;
+}
+
 .carousel div {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 9px;
     background-color: white;
+    opacity: 20%;
 }
 
-.arrow-left {
-    width: 50px;
-    height: 75px;
-    background-color: white;
+.carousel .active {
+    opacity: 40%;
 }
 
-.arrow-left {
-    width: 50px;
-    height: 75px;
-    background-color: white;
+.carousel div:hover {
+    opacity: 30%;
 }
 
-.arrow-left:hover {
+.arrow-right  {
+    transform: rotate(180deg);
+}
+
+.arrow-left, .arrow-right {
     opacity: 50%;
 }
 
-.arrow-right {
-    width: 50px;
-    height: 75px;
-    background-color: white;
-}
-
-.arrow-right:hover {
-    opacity: 50%;
-}
-
-
-
-.store-bar .browse-more {
-    grid-area: browseMore;
+.arrow-left:hover, .arrow-right:hover {
+    opacity: 100%;
 }
 
 .store-bar .store-items {
@@ -120,12 +161,12 @@
 
 .store-bar {
     display: grid;
-    width: 80%;
+    width: 60%;
     grid-template-areas:
-    ". storeItems ."
     "leftArrow storeItems rightArrow"
     ". itemCarousel .";
-    grid-template-columns: 5% 90% 5%;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
 }
 
 @media (width >= 300px) {
@@ -137,5 +178,11 @@
 @media (width >= 900px) {
     .microinteraction {
         padding: 7vw 0 42vw 0;
+    }
+}
+
+@media (width <= 1300px) {
+    .store-bar {
+        overflow-x: auto;
     }
 }

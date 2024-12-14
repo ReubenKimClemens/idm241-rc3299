@@ -15,7 +15,6 @@
     </header>
     <section class="microinteractions">
         <div class="store-bar">
-            <div class="browse-more"></div>
             <div class="store-items">
                 <div class="item-container" id="first-item">
                     <a href="https://store.steampowered.com/app/646570/Slay_the_Spire/">
@@ -25,7 +24,13 @@
                                 <img src="images/background_spotlight.jpg" alt="">
                             </section>
                         </div>
-                        <div class="item-info">Slay the Spire</div>
+                        <div class="item-info">
+                            <h2>Slay the Spire</h2>
+                            <p>We fused card games and roguelikes together to make the best single player deckbuilder we could. Craft a unique deck, encounter bizarre creatures, discover relics of immense power, and Slay the Spire!</p>
+                            <div class="tags">
+                                <div>Roguelike Deckbuilder</div>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 <div class="item-container" id="second-item">
@@ -36,7 +41,14 @@
                                 <img src="images/background_spotlight.jpg" alt="">
                             </section>
                         </div>
-                        <div class="item-info">Generational Zero</div>
+                        <div class="item-info">
+                            <h2>Generation Zero</h2>
+                            <p>Generation Zero is a stealth-action shooter where you wage guerilla warfare against lethal mechanical enemies. Explore a vast open world map inspired by the Swedish Cold War era, take part in the resistance alone or with up to three friends in seamless co-op.
+                            </p>
+                            <div class="tags">
+                                <div>Open World</div>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 <div class="item-container" id="third-item">
@@ -47,18 +59,29 @@
                                 <img src="images/background_spotlight.jpg" alt="">
                             </section>
                         </div>
-                        <div class="item-info">The Long Dark</div>
+                        <div class="item-info">
+                            <h2>The Long Dark</h2>
+                            <p>THE LONG DARK is a thoughtful, exploration-survival experience that challenges solo players to think for themselves as they explore an expansive frozen wilderness in the aftermath of a geomagnetic disaster. There are no zombies -- only you, the cold, and all the threats Mother Nature can muster.
+</p>
+                            <div class="tags">
+                                <div>Survival</div>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
             <div class="carousel">
-                <div></div>
+                <div class="active"></div>
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
-            <div class="arrow-left"></div>
-            <div class="arrow-right"></div>
+            <div class="arrow-left">
+                <img src="images/arrow.svg" alt="">
+            </div>
+            <div class="arrow-right">
+                <img src="images/arrow.svg" alt="">
+            </div>
         </div>
     </section>
     <section class="details">
@@ -85,18 +108,12 @@
             <h3>For game panel</h3>
             <ul>
                 <li>Hover ON</li>
-                <ul>
-                    <li>400ms Delay</li>
-                </ul>
                 <li>Hover OFF</li>
                 <li>Onclick</li>
             </ul>
-            <h3>For studio panel</h3>
+            <h3>For game tag</h3>
             <ul>
                 <li>Hover ON</li>
-                <ul>
-                    <li>400ms Delay</li>
-                </ul>
                 <li>Hover OFF</li>
                 <li>Onclick</li>
             </ul>
@@ -107,11 +124,11 @@
             <ul>
                 <li>Hover ON</li>
                 <ul>
-                    <li>White gradient is applied on the button(Applied on the side the arrow is pointing)</li>
+                    <li>Opacity increases to 100%</li>
                 </ul>
                 <li>Hover OFF</li>
                 <ul>
-                    <li>White gradient disappears</li>
+                    <li>Opacity increases to 50%</li>
                 </ul>
                 <li>Onclick</li>
                 <ul>
@@ -152,43 +169,30 @@
             <ul>
                 <li>hover ON</li>
                 <ul>
-                    <li>Cursor switches from arrow to finger icon</li>
-                    <li>After 400ms Delay
-                        <ul>
-                            <li>Pop-up appears with game description</li>
-                            <li>game panel becomes darker</li>
-                        </ul>
-                    </li>
+                    <li>Name of the game, description, and a tag fade in and lowers opacity of the initial image after .5s</li>
                 </ul>
                 <li>Hover OFF</li>
                 <ul>
-                    <li>Cursor reverts back to arrow icon</li>
-                    <li>Pop-up closes</li>
+                    <li>Name of the game, description, and a tag fade out and opacity of the initial image increases after .5s</li>
                 </ul>
                 <li>Onclick</li>
                 <ul>
                     <li>Navigates to game store page</li>
                 </ul>
             </ul>
-            <h3>For studio panel</h3>
+            <h3>For game tag</h3>
             <ul>
                 <li>hover ON</li>
                 <ul>
-                    <li>Cursor switches from arrow to finger icon</li>
-                    <li>After 400ms Delay
-                        <ul>
-                            <li>Pop-up appears with studio description</li>
-                        </ul>
-                    </li>
+                    <li>Changes text color to white and background to a blue</li>
                 </ul>
                 <li>Hover OFF</li>
                 <ul>
-                    <li>Cursor reverts back to arrow icon</li>
-                    <li>Pop-up closes</li>
+                    <li>Changes text color to black and background to a white</li>
                 </ul>
                 <li>Onclick</li>
                 <ul>
-                    <li>Navigates to studio store page</li>
+                    <li>Navigates to tag page</li>
                 </ul>
             </ul>
         </div>
@@ -198,11 +202,11 @@
             <ul>
                 <li>Hover ON</li>
                 <ul>
-                    <li>White gradient is applied on the button(Applied on the side the arrow is pointing)</li>
+                    <li>Opacity increases to 100%</li>
                 </ul>
                 <li>Hover OFF</li>
                 <ul>
-                    <li>White gradient disappears</li>
+                    <li>Opacity increases to 50%</li>
                 </ul>
                 <li>Onclick</li>
                 <ul>
@@ -236,75 +240,47 @@
                 </ul>
                 <li>Onclick</li>
                 <ul>
-                    <li>Runs script that changes the carousel, but doesn’t since it's already on the selected carousel</li>
+                    <li>Runs script that changes the carousel, but doesn't since it's already on the selected carousel</li>
                 </ul>
             </ul>
             <h3>For game panel</h3>
             <ul>
                 <li>hover ON</li>
                 <ul>
-                    <li>Cursor switches from arrow to finger icon</li>
-                    <li>After 400ms Delay
-                        <ul>
-                            <li>Pop-up appears with game description</li>
-                            <li>game panel becomes darker</li>
-                        </ul>
-                    </li>
+                    <li>Name of the game, description, and a tag fade in and lowers opacity of the initial image after .5s</li>
                 </ul>
                 <li>Hover OFF</li>
                 <ul>
-                    <li>Cursor reverts back to arrow icon</li>
-                    <li>Pop-up closes</li>
+                    <li>Name of the game, description, and a tag fade out and opacity of the initial image increases after .5s</li>
                 </ul>
                 <li>Onclick</li>
                 <ul>
                     <li>Navigates to game store page</li>
                 </ul>
             </ul>
-            <h3>For studio panel</h3>
+            <h3>For game tag</h3>
             <ul>
                 <li>hover ON</li>
                 <ul>
-                    <li>Cursor switches from arrow to finger icon</li>
-                    <li>After 400ms Delay
-                        <ul>
-                            <li>Pop-up appears with studio description</li>
-                        </ul>
-                    </li>
+                    <li>Changes text color to white and background to a blue</li>
                 </ul>
                 <li>Hover OFF</li>
                 <ul>
-                    <li>Cursor reverts back to arrow icon</li>
-                    <li>Pop-up closes</li>
+                    <li>Changes text color to black and background to a white</li>
                 </ul>
                 <li>Onclick</li>
                 <ul>
-                    <li>Navigates to studio store page</li>
+                    <li>Navigates to tag page</li>
                 </ul>
             </ul>
         </div>
         <div class="loopsmode">
             <h2>Loops</h2>
-            <h3>For carousel arrow buttons</h3>
             <ul>
-                <li>none</li>
+                <li>No loops for any</li>
             </ul>
-            <h3>For carousel indicators</h3>
-            <ul>
-                <li>none</li>
-            </ul>
-            <h3>For game panel</h3>
-            <ul>
-                <li>Pop-up:</li>
-                <ul>
-                    <li>Loops through images from the game(The ones provided for preview) in the pop-up</li>
-                </ul>
-            </ul>
+
             <h2>Modes</h2>
-            <h3>For carousel arrow buttons</h3>
-            <ul>
-                <li>none</li>
-            </ul>
             <h3>For carousel indicators</h3>
             <ul>
                 <li>
@@ -322,20 +298,6 @@
                         <li>Gains class called ‘focus’</li>
                     </ul>
                 </li>
-            </ul>
-            <h3>For game panel</h3>
-            <ul>
-                <li>Pop-up window when hovering:</li>
-                <ul>
-                    <li>Opens a description of the game and loops through images</li>
-                </ul>
-            </ul>
-            <h3>For studio panel</h3>
-            <ul>
-                <li>Pop-up window when hovering:</li>
-                <ul>
-                    <li>Opens a description of the studio with their hero image</li>
-                </ul>
             </ul>
         </div>
     </section>
